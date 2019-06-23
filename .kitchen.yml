@@ -25,3 +25,7 @@ suites:
       inspec_tests:
         - test/integration/default
     attributes:
+  - name: install_pip
+    run_list:
+      - recipe[django::install_pip]
+    attributes:
