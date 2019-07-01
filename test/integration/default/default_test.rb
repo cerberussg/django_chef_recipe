@@ -1,5 +1,5 @@
 # # encoding: utf-8
 
-describe command('django-admin --version') do
-  its(:stdout) { should match(/1.11.11/) }
+describe command('virtualenv --version') do
+  its(:stdout) { should match(/16.6.1/) }
 end
