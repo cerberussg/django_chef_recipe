@@ -25,7 +25,6 @@ suites:
       inspec_tests:
         - test/integration/default
     attributes:
-<<<<<<< HEAD
   - name: install_virtualenv
     run_list:
       - recipe[django::install_virtualenv]
@@ -33,10 +32,14 @@ suites:
       inspec_tests:
         - test/integration/default
     attributes:
-||||||| merged common ancestors
-=======
   - name: install_pip
     run_list:
       - recipe[django::install_pip]
     attributes:
->>>>>>> 5398bcad705406149277587dd216bbb4bf3b2d5b
+  - name: install_from_packages
+    run_list:
+      - recipe[django::install__from_packages]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
