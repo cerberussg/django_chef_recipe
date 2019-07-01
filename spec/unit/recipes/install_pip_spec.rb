@@ -24,6 +24,7 @@ describe 'django::install_pip' do
     end
     it 'installs django framework' do
       expect(chef_run).to run_execute('pip3 install django')
+      # expect(chef_run).to install_pip('django')
     end
   end
 end
